@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
-
+import { Component} from '@angular/core';
+        
 @Component({
     selector: 'my-app',
-    templateUrl: './app.template.html', 
-    styleUrls: ['./app.style.css']
+    template: `<div [class]="red"></div>`,
+    styles: [`
+        div {width:50px; height:50px; border:1px solid #ccc}
+         .isredbox{background-color:red;}
+    `]
 })
-export class AppComponent {
-    name = '';
+export class AppComponent{ 
+      
+    red = "isredbox"
 }
